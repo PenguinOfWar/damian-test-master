@@ -39,24 +39,8 @@ ul {
 }
 
 .App-body {
-  text-align: left;
+  padding-top: 50px;
 }
-
-/*.Left-module {
-  padding-top:50px;
-  padding-left:50px;
-  padding-right:50px;
-  justify-content:left;
-  float:left;
-}
-
-.Right.module {
-  padding-top:50px;
-  padding-left:50px;
-  padding-right:50px;
-  justify-content:right;
-  float:right;
-}*/
 
 .Loading {
   margin-top:150px;
@@ -64,4 +48,17 @@ ul {
   font-weight: bold;
   font-size:28px;
   color: #bb0e0e;
+}
+
+// NOTE: One thing missing from your usage of SASS is actually leveraging the cool stuff SASS gives us.
+// One example is nesting of styles which we cannot do normally in CSS
+// I've assigned the post-list and post components their own classes, let's use them.
+// Inspect the rendered CSS in your browser to see how this works
+
+.post-list {
+  .post {
+    border-bottom: 2px solid grey;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
 }
